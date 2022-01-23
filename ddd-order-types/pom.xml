@@ -9,24 +9,12 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>ddd-order-api</artifactId>
+    <artifactId>ddd-order-types</artifactId>
 
     <dependencies>
-        <!-- 内部模块依赖 -->
-        <dependency>
-            <groupId>com.cxytiandi</groupId>
-            <artifactId>ddd-order-types</artifactId>
-        </dependency>
-
-        <!-- 外部框架依赖 -->
-        <dependency>
-            <groupId>com.alibaba.cola</groupId>
-            <artifactId>cola-component-dto</artifactId>
-        </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
         </dependency>
     </dependencies>
-
 </project>

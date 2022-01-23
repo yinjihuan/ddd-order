@@ -1,8 +1,12 @@
 package com.cxytiandi.ddd.order.application.command;
 
+import com.cxytiandi.ddd.order.exception.ValidationException;
+import com.cxytiandi.ddd.order.types.UserId;
 import lombok.Data;
+import org.springframework.util.CollectionUtils;
 
 import java.util.List;
+import java.util.Objects;
 
 /**
  * 下单命令
@@ -20,7 +24,7 @@ public class PlaceOrderCommand {
     /**
      * 用户
      */
-    private Long userId;
+    private UserId userId;
 
     /**
      * 下单的商品
@@ -32,6 +36,7 @@ public class PlaceOrderCommand {
      */
     private Long totalAmount;
 
+    @Data
     public static class PlaceOrderSku {
 
         /**
@@ -44,5 +49,17 @@ public class PlaceOrderCommand {
          */
         private Integer quantity;
 
+    }
+
+    public void check() {
+        if (Objects.isNull(userId)) {
+            throw new ValidationException("下单用户不能为空");
+        }
+        if (CollectionUtils.isEmpty(skus)) {
+            throw new ValidationException("下单商品不能为空");
+        }
+        if (Objects.isNull(totalAmount)) {
+            throw new ValidationException("下单金额不能为空");
+        }
     }
 }

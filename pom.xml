@@ -17,6 +17,7 @@
         <module>ddd-order-api</module>
         <module>ddd-order-common</module>
         <module>ddd-order-start</module>
+        <module>ddd-order-types</module>
     </modules>
 
     <properties>
@@ -63,6 +64,11 @@
             <dependency>
                 <groupId>com.cxytiandi</groupId>
                 <artifactId>ddd-order-common</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.cxytiandi</groupId>
+                <artifactId>ddd-order-types</artifactId>
                 <version>${project.version}</version>
             </dependency>
 

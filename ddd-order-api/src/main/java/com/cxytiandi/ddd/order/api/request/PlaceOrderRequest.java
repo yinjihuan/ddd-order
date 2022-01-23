@@ -1,5 +1,6 @@
 package com.cxytiandi.ddd.order.api.request;
 
+import com.cxytiandi.ddd.order.types.UserId;
 import lombok.Data;
 
 import java.util.List;
@@ -20,7 +21,7 @@ public class PlaceOrderRequest {
     /**
      * 用户
      */
-    private Long userId;
+    private UserId userId;
 
     /**
      * 下单的商品

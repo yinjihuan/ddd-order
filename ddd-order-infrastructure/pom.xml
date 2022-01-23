@@ -17,6 +17,10 @@
             <groupId>com.cxytiandi</groupId>
             <artifactId>ddd-order-common</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.cxytiandi</groupId>
+            <artifactId>ddd-order-types</artifactId>
+        </dependency>
 
         <!-- 外部框架依赖 -->
         <dependency>
