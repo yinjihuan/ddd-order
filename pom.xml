@@ -20,7 +20,9 @@
     </modules>
 
     <properties>
-
+        <cola.version>4.0.1</cola.version>
+        <lombok.version>1.18.16</lombok.version>
+        <mapstruct.version>1.4.2.Final</mapstruct.version>
     </properties>
 
     <parent>
@@ -35,8 +37,57 @@
             <!-- 内部模块依赖 -->
             <dependency>
                 <groupId>com.cxytiandi</groupId>
+                <artifactId>ddd-order-api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.cxytiandi</groupId>
                 <artifactId>ddd-order-interface</artifactId>
                 <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.cxytiandi</groupId>
+                <artifactId>ddd-order-application</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.cxytiandi</groupId>
+                <artifactId>ddd-order-domain</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.cxytiandi</groupId>
+                <artifactId>ddd-order-infrastructure</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.cxytiandi</groupId>
+                <artifactId>ddd-order-common</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <!-- 外部框架依赖 -->
+            <dependency>
+                <groupId>com.alibaba.cola</groupId>
+                <artifactId>cola-component-dto</artifactId>
+                <version>${cola.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.mapstruct</groupId>
+                <artifactId>mapstruct</artifactId>
+                <version>${mapstruct.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mapstruct</groupId>
+                <artifactId>mapstruct-processor</artifactId>
+                <version>${mapstruct.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

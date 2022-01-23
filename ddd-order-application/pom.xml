@@ -11,5 +11,11 @@
 
     <artifactId>ddd-order-application</artifactId>
 
-
+    <dependencies>
+        <!-- 内部模块依赖 -->
+        <dependency>
+            <groupId>com.cxytiandi</groupId>
+            <artifactId>ddd-order-infrastructure</artifactId>
+        </dependency>
+    </dependencies>
 </project>

@@ -17,12 +17,6 @@
             <groupId>com.cxytiandi</groupId>
             <artifactId>ddd-order-interface</artifactId>
         </dependency>
-
-        <!-- 外部框架依赖 -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
     </dependencies>
 
 </project>
