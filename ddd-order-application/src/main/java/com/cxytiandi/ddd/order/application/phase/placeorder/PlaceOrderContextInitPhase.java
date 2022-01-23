@@ -2,6 +2,8 @@ package com.cxytiandi.ddd.order.application.phase.placeorder;
 
 import com.cxytiandi.ddd.order.application.command.PlaceOrderCommand;
 import com.cxytiandi.ddd.order.application.context.PlaceOrderContext;
+import com.cxytiandi.ddd.order.application.phase.placeorder.step.BuyerInfoInitStep;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
@@ -17,9 +19,14 @@ import org.springframework.stereotype.Component;
 @Component
 public class PlaceOrderContextInitPhase {
 
+    @Autowired
+    private BuyerInfoInitStep buyerInfoInitStep;
+
     public PlaceOrderContext init(PlaceOrderCommand command) {
         PlaceOrderContext context = new PlaceOrderContext();
         context.setPlaceOrderCommand(command);
+
+        buyerInfoInitStep.initBuyerInfo(context);
         return context;
     }
 

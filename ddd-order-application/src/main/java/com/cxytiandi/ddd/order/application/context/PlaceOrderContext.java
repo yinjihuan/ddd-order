@@ -1,6 +1,7 @@
 package com.cxytiandi.ddd.order.application.context;
 
 import com.cxytiandi.ddd.order.application.command.PlaceOrderCommand;
+import com.cxytiandi.ddd.order.domain.buyer.valueobject.Buyer;
 import lombok.Data;
 
 /**
@@ -16,6 +17,14 @@ import lombok.Data;
 @Data
 public class PlaceOrderContext {
 
+    /**
+     * 下单参数
+     */
     private PlaceOrderCommand placeOrderCommand;
+
+    /**
+     * 用户-买家信息
+     */
+    private Buyer buyer;
 
 }

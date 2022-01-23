@@ -21,6 +21,10 @@
             <groupId>com.cxytiandi</groupId>
             <artifactId>ddd-order-types</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.cxytiandi</groupId>
+            <artifactId>ddd-order-domain</artifactId>
+        </dependency>
 
         <!-- 外部框架依赖 -->
         <dependency>

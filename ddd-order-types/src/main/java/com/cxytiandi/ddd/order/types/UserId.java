@@ -17,7 +17,7 @@ import java.util.Objects;
 @Data
 public class UserId {
 
-    private Long userId;
+    private Long value;
 
     public UserId() {
 
@@ -25,12 +25,12 @@ public class UserId {
 
     public UserId(Long userId) {
         validation(userId);
-        this.userId = userId;
+        this.value = userId;
     }
 
     public void setUserId(Long userId) {
         validation(userId);
-        this.userId = userId;
+        this.value = userId;
     }
 
     private void validation(Long userId) {
