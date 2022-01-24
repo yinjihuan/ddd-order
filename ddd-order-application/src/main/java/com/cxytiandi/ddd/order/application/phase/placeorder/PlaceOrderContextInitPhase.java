@@ -2,6 +2,7 @@ package com.cxytiandi.ddd.order.application.phase.placeorder;
 
 import com.cxytiandi.ddd.order.application.command.PlaceOrderCommand;
 import com.cxytiandi.ddd.order.application.context.PlaceOrderContext;
+import com.cxytiandi.ddd.order.application.phase.placeorder.step.AddressInfoInitStep;
 import com.cxytiandi.ddd.order.application.phase.placeorder.step.BuyerInfoInitStep;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -22,11 +23,15 @@ public class PlaceOrderContextInitPhase {
     @Autowired
     private BuyerInfoInitStep buyerInfoInitStep;
 
+    @Autowired
+    private AddressInfoInitStep addressInfoInitStep;
+
     public PlaceOrderContext init(PlaceOrderCommand command) {
         PlaceOrderContext context = new PlaceOrderContext();
         context.setPlaceOrderCommand(command);
 
         buyerInfoInitStep.initBuyerInfo(context);
+        addressInfoInitStep.initBuyerInfo(context);
         return context;
     }
 

@@ -1,6 +1,7 @@
 package com.cxytiandi.ddd.order.application.command;
 
 import com.cxytiandi.ddd.order.exception.ValidationException;
+import com.cxytiandi.ddd.order.types.AddressId;
 import com.cxytiandi.ddd.order.types.UserId;
 import lombok.Data;
 import org.springframework.util.CollectionUtils;
@@ -25,6 +26,11 @@ public class PlaceOrderCommand {
      * 用户
      */
     private UserId userId;
+
+    /**
+     * 地址
+     */
+    private AddressId addressId;
 
     /**
      * 下单的商品

@@ -1,7 +1,6 @@
 package com.cxytiandi.ddd.order.types;
 
 import com.cxytiandi.ddd.order.exception.ValidationException;
-import lombok.Data;
 import java.util.Objects;
 
 /**
@@ -14,7 +13,6 @@ import java.util.Objects;
  * @作者介绍 http://cxytiandi.com/about
  * @时间 2022-01-23 16:15
  */
-@Data
 public class UserId {
 
     private Long value;
@@ -28,9 +26,13 @@ public class UserId {
         this.value = userId;
     }
 
-    public void setUserId(Long userId) {
+    public void setValue(Long userId) {
         validation(userId);
         this.value = userId;
+    }
+
+    public Long getValue() {
+        return value;
     }
 
     private void validation(Long userId) {

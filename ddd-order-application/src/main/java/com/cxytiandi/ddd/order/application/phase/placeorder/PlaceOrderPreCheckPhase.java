@@ -34,7 +34,7 @@ public class PlaceOrderPreCheckPhase {
         placeOrderBasicParametersCheckStep.checkBasicParameters(context.getPlaceOrderCommand());
 
         // 下单风控前置校验
-        placeOrderRiskPreCheckStep.preCheckRisk(context.getPlaceOrderCommand());
+        placeOrderRiskPreCheckStep.preCheckRisk(context);
 
         // 下单的业务校验
         placeOrderBizCheckStep.checkBiz(context.getPlaceOrderCommand());

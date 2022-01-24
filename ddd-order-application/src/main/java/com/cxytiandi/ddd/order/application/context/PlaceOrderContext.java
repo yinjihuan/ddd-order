@@ -1,6 +1,7 @@
 package com.cxytiandi.ddd.order.application.context;
 
 import com.cxytiandi.ddd.order.application.command.PlaceOrderCommand;
+import com.cxytiandi.ddd.order.domain.address.valueobject.Address;
 import com.cxytiandi.ddd.order.domain.buyer.valueobject.Buyer;
 import lombok.Data;
 
@@ -26,5 +27,10 @@ public class PlaceOrderContext {
      * 用户-买家信息
      */
     private Buyer buyer;
+
+    /**
+     * 地址信息
+     */
+    private Address address;
 
 }
