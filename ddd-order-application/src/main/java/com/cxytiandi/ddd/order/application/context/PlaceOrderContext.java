@@ -3,7 +3,10 @@ package com.cxytiandi.ddd.order.application.context;
 import com.cxytiandi.ddd.order.application.command.PlaceOrderCommand;
 import com.cxytiandi.ddd.order.domain.address.valueobject.Address;
 import com.cxytiandi.ddd.order.domain.buyer.valueobject.Buyer;
+import com.cxytiandi.ddd.order.domain.goods.valueobject.Sku;
 import lombok.Data;
+
+import java.util.List;
 
 /**
  * 下单上下文
@@ -32,5 +35,10 @@ public class PlaceOrderContext {
      * 地址信息
      */
     private Address address;
+
+    /**
+     * 商品信息
+     */
+    private List<Sku> skus;
 
 }

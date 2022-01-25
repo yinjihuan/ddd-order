@@ -41,6 +41,7 @@ public class RiskCheckRequest {
      */
     private List<Sku> skus;
 
+    @Data
     public static class Sku {
 
         /**
