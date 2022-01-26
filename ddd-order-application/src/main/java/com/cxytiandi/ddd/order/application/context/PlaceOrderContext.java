@@ -4,6 +4,7 @@ import com.cxytiandi.ddd.order.application.command.PlaceOrderCommand;
 import com.cxytiandi.ddd.order.domain.address.valueobject.Address;
 import com.cxytiandi.ddd.order.domain.buyer.valueobject.Buyer;
 import com.cxytiandi.ddd.order.domain.goods.valueobject.Sku;
+import com.cxytiandi.ddd.order.domain.stock.valueobject.StockDeductResponse;
 import lombok.Data;
 
 import java.util.List;
@@ -40,5 +41,10 @@ public class PlaceOrderContext {
      * 商品信息
      */
     private List<Sku> skus;
+
+    /**
+     * 库存扣减结果
+     */
+    private List<StockDeductResponse> stockDeductResponses;
 
 }
